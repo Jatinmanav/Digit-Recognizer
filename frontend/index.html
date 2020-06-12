@@ -5,16 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <title>Digit Recognizer</title>
 </head>
 
 <body>
+  <nav class="navbar navbar-dark bg-dark mb-5 ">
+    <p class="navbar-brand mb-0 h1 mx-auto">Digit Recognizer</p>
+  </nav>
   <div class="container">
-    <canvas id="canvas" width="280" height="280" onclick="handleClick(event)" />
+    <canvas class="mb-5" id="canvas" width="280" height="280" onclick="handleClick(event)" />
   </div>
-  <form onsubmit="return false">
-    <button type="button" id="buttonVerify" onclick="handleSubmit(event)">Verify</button>
+  <div>
+    <p id="result" class="text-center h4 mb-3">Predictions: </p>
+  </div>
+  <form class="text-center" onsubmit="return false">
+    <button type="button" class="mx-auto btn btn-primary btn-lg" id="buttonVerify"
+      onclick="handleSubmit(event)">Verify</button>
   </form>
   <script src="script.js"> </script>
   <img id="test-img" />

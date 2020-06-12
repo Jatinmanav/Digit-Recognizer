@@ -2,10 +2,6 @@ body {
   background-color: #ccc;
 }
 
-.container {
-  align-items: center;
-}
-
 #canvas {
   background-color: #000;
   display: block;

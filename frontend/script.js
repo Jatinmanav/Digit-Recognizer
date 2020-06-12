@@ -1,5 +1,6 @@
 const canvas = document.querySelector("#canvas");
 const submitButton = document.querySelector("#submit");
+const result = document.querySelector("#result");
 const ctx = canvas.getContext("2d");
 axios.defaults.baseURL = "http://localhost:5000";
 canvas.height = 280;
@@ -67,6 +68,7 @@ const handleSubmit = (event) => {
   })
     .then((res) => {
       console.log(res);
+      result.innerHTML = `Predictions: ${res.data}`;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     })
     .catch((err) => console.log(err));
